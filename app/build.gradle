@@ -46,12 +46,11 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation 'com.backendless:backendless:5.2.4'
-    implementation 'com.google.code.gson:gson:2.8.5'
-    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
     implementation 'com.squareup.picasso:picasso:2.71828'
     implementation 'com.android.support:recyclerview-v7:28.0.0'
     implementation 'com.squareup.okio:okio:2.2.2'
     implementation 'javax.servlet:javax.servlet-api:4.0.1'
     implementation 'com.ticketmaster.api:discovery-model-java:0.1.6'
     implementation 'com.ticketmaster.api:discovery-java:0.1.6'
+    implementation 'com.appunity.retrofit2:converter-gson:2.0.2'
 }
