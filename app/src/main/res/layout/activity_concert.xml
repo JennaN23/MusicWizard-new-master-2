@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConcertActivity">
+
+    <RelativeLayout
+        android:layout_above="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <EditText
+            android:id="@+id/edittext_concertactiity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/search_concerts"/>
+
+        <Button
+            android:id="@+id/button_concertactivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edittext_concertactiity"
+            android:layout_gravity="center"
+            android:text="@android:string/search_go" />
+
+        <TextView
+            android:id="@+id/textview_concertactivity_eventname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_concertactivity"
+            android:layout_gravity="center"
+            android:text="@string/event_name"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/textview_concertactivity_eventtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textview_concertactivity_eventname"
+            android:layout_gravity="center"
+            android:text="@string/event_time"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textview_concertactivity_eventlocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textview_concertactivity_eventtime"
+            android:layout_gravity="center"
+            android:text="@string/event_location"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView_concertactivity_eventdescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textview_concertactivity_eventlocation"
+            android:layout_gravity="center"
+            android:text="@string/event_discription"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom">
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            app:menu="@menu/navigation">
+
+        </android.support.design.widget.BottomNavigationView>
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>
