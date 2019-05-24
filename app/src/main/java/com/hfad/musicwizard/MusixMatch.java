@@ -1,42 +1,42 @@
 package com.hfad.musicwizard;
 
+import com.google.gson.Gson;
+import com.google.gson.JsonParseException;
+
+import org.jmusixmatch.Helper;
+import org.jmusixmatch.MusixMatchException;
+import org.jmusixmatch.config.Constants;
+import org.jmusixmatch.config.Methods;
+import org.jmusixmatch.config.StatusCode;
+import org.jmusixmatch.entity.error.ErrorMessage;
+import org.jmusixmatch.entity.lyrics.Lyrics;
+import org.jmusixmatch.entity.lyrics.get.LyricsGetMessage;
+import org.jmusixmatch.entity.track.Track;
+import org.jmusixmatch.entity.track.TrackData;
+import org.jmusixmatch.entity.track.get.TrackGetMessage;
+import org.jmusixmatch.entity.track.search.TrackSeachMessage;
+import org.jmusixmatch.http.MusixMatchRequest;
+import org.jmusixmatch.snippet.Snippet;
+import org.jmusixmatch.snippet.get.SnippetGetMessage;
+import org.jmusixmatch.subtitle.Subtitle;
+import org.jmusixmatch.subtitle.get.SubtitleGetMessage;
+
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class MusixMatch {
 
     private String apiKey = "4ab5ae9e96c6b208d9601e182c4af443";
-    private List<MusixMatchResponse> message;
+    private Track track;
+    private TrackData message;
 
-    public MusixMatch(String apiKey, List<MusixMatchResponse> message) {
-        this.apiKey = apiKey;
-        this.message = message;
+    public MusixMatch(String apiKey) {
+
     }
 
-    public void setMessage(List<MusixMatchResponse> message) {
-        this.message = message;
-    }
-
-    public List<MusixMatchResponse> getMessage() {
-        return message;
-    }
-
-    public String getApiKey() {
-        return apiKey;
-    }
-
-    public void setApiKey(String apiKey) {
-        this.apiKey = apiKey;
-    }
-
-    @Override
-    public String toString() {
-        return "MusixMatch{" +
-                "message=" + message +
-                '}';
-    }
-/*
     public Lyrics getLyrics(int trackID) throws MusixMatchException {
-        Lyrics lyrics = null;
+        org.jmusixmatch.entity.lyrics.Lyrics lyrics = null;
         LyricsGetMessage message = null;
         Map<String, Object> params = new HashMap<String, Object>();
         params.put(Constants.API_KEY, apiKey);
@@ -191,5 +191,5 @@ public class MusixMatch {
                 break;
         }
         throw new MusixMatchException(statusCode.getStatusMessage());
-    }**/
+    }
 }

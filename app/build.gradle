@@ -53,4 +53,5 @@ dependencies {
     implementation 'com.ticketmaster.api:discovery-model-java:0.1.6'
     implementation 'com.ticketmaster.api:discovery-java:0.1.6'
     implementation 'com.appunity.retrofit2:converter-gson:2.0.2'
+    implementation 'com.sachinhandiekar:jMusixMatch:1.1.4'
 }

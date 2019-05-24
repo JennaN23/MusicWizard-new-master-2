@@ -31,4 +31,6 @@
     <string name="event_venue">Event Venue</string>
     <string name="event_discription">Event Discription</string>
     <string name="event_location">Event Location</string>
+    <string name="event_image">event_image</string>
+    <string name="previous_event">previous_event</string>
 </resources>
